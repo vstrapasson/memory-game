@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+}
+
+.cards {
+  background: linear-gradient(to top left, #a951ed, #02ccba);
+  border-radius: 1em;
+  padding: 15px 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards li.card {
+  width: 200px;
+  height: 200px;
+  border-radius: 1em;
+  margin: 15px;
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+  transition: all .3s linear;
+}
+
+.face {
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.card.active {
+  transform: rotateY(180deg);
+}
+
+.card .front {
+  background-color: purple;
+  transform: rotateY(180deg);
+  position: absolute;
+}
+
+.card .back {
+  background-color: #2F404B;
+  position: absolute;
+}
