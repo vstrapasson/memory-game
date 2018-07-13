@@ -1,87 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Memory Game" />
+    <meta name="author" content="https://github.com/vstrapasson">
+
+    <title>Memory Game</title>
+
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+
 </head>
 <body>
   <div class="container">
     <article id="game">
       <header>
         <h1>Memory Game</h1>
-        <div class="">
-          <span>1 Move</span>
-          <span></span>
-        </div>
+        <span class="score">
+          <span class="counter" id="moves">0</span><span>Moves</span>
+          <span>Timer: </span><span class="counter" id="timer">0</span>
+        </span>
+        <span class="stars">
+            <span><i class="fas fa-star"></i></span>
+            <span><i class="fas fa-star"></i></span>
+            <span><i class="fas fa-star"></i></span>
+        </span>
+        <a class="reset" href="#"><span><i class="fas fa-sync-alt"></i></span></a>
       </header>
-      <ul class="cards">
-        <li class="card">
+      <ul id="cards" class="cards">
+        <!-- li.card*16>div.back.face+div.front.face>i.fab  -->
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
-        <li class="card">
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
-        <li class="card">
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
-        <li class="card">
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
-        <li class="card">
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
-        <li class="card">
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
-        <li class="card">
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
-        <li class="card">
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
-        <li class="card">
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
-        <li class="card">
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
-        <li class="card">
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
-        <li class="card">
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
-        <li class="card">
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
-        <li class="card">
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
-        <li class="card">
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
-        <li class="card">
+        <li class="card animated">
           <div class="back face"></div>
-          <div class="front face"></div>
+          <div class="front face"><i class="fas"></i></div>
         </li>
       </ul>
     </article>
   </div>
+  <div class="modal hidden">
+    <div class="content">
+      <h1>Congratulations! You Won!</h1>
+      <p id="win-message"></p>
+      <a class="button reset" href="#">Play Again</a>
+    </div>
+  </div>
+  <script src="./js/game.js" charset="utf-8"></script>
 </body>
 </html>
