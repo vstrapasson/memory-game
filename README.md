@@ -1,3 +1,3 @@
 # Memory Game
 
-A web memory game
+This game is a test of Nanodegree Front-end Web Developer
