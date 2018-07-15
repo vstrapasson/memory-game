@@ -153,7 +153,7 @@ MemoryGame.prototype.handleNoMatche = function (firstCardDOM, secondCardDOM) {
 MemoryGame.prototype.gameWin = function () {
     this.stopTimer();
 
-    const winMessage = 'With ' + this.moves + ' moves and ' + this.score + ' Stars!';
+    const winMessage = 'With ' + this.moves + ' moves, ' + this.score + ' stars and ' + this.timer + 'seconds!';
     document.querySelector('#win-message').innerHTML = winMessage;
 
     showModal();
@@ -163,6 +163,11 @@ MemoryGame.prototype.restart = function () {
   document.querySelector('#cards').querySelectorAll('[class^=fa]').forEach(function (element) {
       element.className = 'fas';
   });
+
+  document.querySelector('.stars').querySelectorAll('.far').forEach(function (element) {
+    element.classList.remove('far');
+    element.classList.add('fas');
+  })
 
   document.querySelectorAll('.active').forEach(function (element) {
       element.classList.remove('active');
