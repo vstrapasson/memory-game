@@ -85,6 +85,8 @@ MemoryGame.prototype.start = function () {
   this.timer = 0;
   this.moves = 0;
   this.matchedCards = 0;
+  this.score = 3;
+  this.lastOpenedCard = null;
 
   this.createCards();
   this.startTimer();
